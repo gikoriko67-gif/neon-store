@@ -10,6 +10,6 @@ window.SITE_CONFIG = {
   exchangeRateRub: 90,
   exchangeMinimumUsdt: 5,
   starsSellMinimum: 300,
-  starsSellRateRub: 0, // Укажите сумму в рублях за 1 Star
+  starsSellRateRub: 1, // 1 рубль за 1 Star
   starsSellBotUrl: "" // Вставьте ссылку на Telegram-бота для приёма Stars
 };

@@ -11,5 +11,5 @@ window.SITE_CONFIG = {
   exchangeMinimumUsdt: 5,
   starsSellMinimum: 300,
   starsSellRateRub: 1, // 1 рубль за 1 Star
-  starsSellBotUrl: "" // Вставьте ссылку на Telegram-бота для приёма Stars
+  starsSellBotUrl: "https://t.me/TGbot" // Telegram-бот для приёма Stars (@TGbot)
 };

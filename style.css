@@ -59,3 +59,6 @@
 #stars-sell .exchange-panel { min-width: 0; }
 #stars-sell .amount-wrap input { min-width: 0; }
 #stars-sell .result-box strong { color: #72dcb9; }
+
+/* Курс продажи: число должно быть такого же размера, как знак рубля. */
+.rate-badge b > span[data-stars-rate]{display:inline;font:inherit;letter-spacing:normal;color:inherit}

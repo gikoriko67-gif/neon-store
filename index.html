@@ -75,8 +75,18 @@
           <div class="range-note">Минимальная сумма: <b>5 USDT</b></div>
           <div class="rate-line"><span>Текущий курс</span><b>1 USDT = <span data-rate>90</span> ₽</b></div>
           <div class="result-box"><span>Предварительная сумма к выплате</span><strong id="rub-result">450 ₽</strong></div>
+          <div class="payout-entry">
+            <div class="payout-entry-title">Куда отправить рубли?</div>
+            <div class="payout-options">
+              <label class="payout-option"><input type="radio" name="exchange-payout" value="phone" checked><span class="radio-dot"></span><span><b>По номеру телефона</b><small>Перевод по СБП</small></span></label>
+              <label class="payout-option"><input type="radio" name="exchange-payout" value="card"><span class="radio-dot"></span><span><b>По номеру карты</b><small>Банковская карта</small></span></label>
+            </div>
+            <label class="field-label" id="exchange-destination-label" for="exchange-destination">Номер телефона для выплаты</label>
+            <input class="destination-input" id="exchange-destination" type="tel" autocomplete="off" placeholder="+7 900 000-00-00" maxlength="32">
+            <p class="small-muted">Указывай только номер телефона или карты. Не вводи CVV/CVC, PIN-код, срок действия карты или банковские пароли.</p>
+          </div>
           <button class="btn primary full" id="exchange-submit">Обменять USDT на RUB <span>→</span></button>
-          <p class="small-muted">Перед переводом укажи реквизиты для получения рублей. Выплата согласуется вручную.</p>
+          <p class="small-muted">На следующем шаге появятся адрес кошелька и инструкция по переводу USDT. Выплата рублей производится вручную после проверки поступления.</p>
         </div>
         <div class="exchange-side">
           <div class="side-icon">⇄</div><h3>Прозрачный расчёт</h3><p>Укажи количество USDT — калькулятор сразу покажет ориентировочную сумму в рублях.</p>

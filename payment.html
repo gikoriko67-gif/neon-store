@@ -16,27 +16,29 @@
   <main class="wrap payment-page">
     <div class="eyebrow">USDT → RUB / TRANSFER</div>
     <h1 class="payment-title">Перевод <span>USDT</span></h1>
-    <p class="payment-intro">Проверь сумму обмена и реквизиты выплаты. Затем отправь USDT на указанный адрес в сети TRC20.</p>
+    <p class="payment-intro">Переведи указанную сумму USDT на адрес ниже. Используй только сеть TRON (TRC20).</p>
 
     <section class="exchange-panel payment-summary-panel">
-      <div class="panel-top"><span>ДЕТАЛИ ОБМЕНА</span><span class="live-dot">● ЗАЯВКА</span></div>
+      <div class="panel-top"><span>ДЕТАЛИ ОБМЕНА</span><span class="live-dot">● ПРОВЕРЬ ПЕРЕД ОТПРАВКОЙ</span></div>
       <div class="summary-grid">
-        <div class="summary-tile"><span>СУММА ОБМЕНА</span><b id="pay-amount">— USDT</b></div>
+        <div class="summary-tile"><span>СУММА К ПЕРЕВОДУ</span><b id="pay-amount">— USDT</b></div>
         <div class="summary-tile"><span>ПРЕДВАРИТЕЛЬНАЯ ВЫПЛАТА</span><b id="pay-rub">— RUB</b></div>
-        <div class="summary-tile payout-summary-tile"><span>СПОСОБ ПОЛУЧЕНИЯ</span><b id="payout-method">—</b></div>
-        <div class="summary-tile payout-summary-tile"><span>РЕКВИЗИТЫ ВЫПЛАТЫ</span><b id="payout-destination">—</b></div>
+        <div class="summary-tile"><span>СПОСОБ ПОЛУЧЕНИЯ РУБЛЕЙ</span><b id="payout-method">—</b></div>
+        <div class="summary-tile"><span>РЕКВИЗИТЫ ДЛЯ ВЫПЛАТЫ</span><b id="payout-destination">—</b></div>
       </div>
     </section>
 
     <section class="exchange-panel wallet-panel" id="wallet-panel">
-      <div class="panel-top"><span>ОПЛАТА / ШАГ 2</span><span class="live-dot">● TRC20 ONLY</span></div>
-      <h2 class="wallet-title">Отправь USDT на адрес</h2>
+      <div class="panel-top"><span>АДРЕС ДЛЯ ПЕРЕВОДА</span><span class="live-dot">● TRC20</span></div>
+      <h2 class="wallet-title">Отправьте USDT на указанный ниже адрес — после чего в течении минуты рубли поступят на указанные вами реквизиты</h2>
       <div class="network-line"><span>СЕТЬ ПЕРЕВОДА</span><b>TRON (TRC20)</b></div>
-      <div class="detail-label">АДРЕС КОШЕЛЬКА ДЛЯ ПОЛУЧЕНИЯ USDT</div>
-      <div class="address-line wallet-address-line"><code id="exchange-wallet">TWNe16cgaRHS9APMiVH9DBQTFDxq6S73eF</code><button id="copy-exchange-wallet" class="copy-btn">Копировать</button></div>
-      <div class="warning-panel">Отправляй только USDT в сети TRON (TRC20). Перед подтверждением перевода внимательно проверь сеть, адрес и сумму. Перевод через другую сеть может привести к потере средств.</div>
-      <a class="btn primary full" id="notify-support" href="#" target="_blank" rel="noopener">Сообщить о переводе в Telegram ↗</a>
-      <p class="small-muted">Сайт не отслеживает блокчейн-транзакции и не подтверждает оплату автоматически. После отправки USDT сообщи поддержке и приложи TXID. Выплата рублей производится вручную после проверки поступления.</p>
+      <div class="detail-label">АДРЕС КОШЕЛЬКА ДЛЯ ОТПРАВКИ USDT</div>
+      <div class="address-line wallet-address-line">
+        <code id="exchange-wallet">TWNe16cgaRHS9APMiVH9DBQTFDxq6S73eF</code>
+        <button id="copy-exchange-wallet" class="copy-btn" type="button">Копировать адрес</button>
+      </div>
+      <div class="warning-panel">Важно: отправляй только USDT в сети TRON (TRC20). Не отправляй USDT через ERC20, BEP20 или другую сеть. Перед отправкой проверь сумму и адрес.</div>
+      <a class="btn primary full" id="notify-support" href="#" target="_blank" rel="noopener">Я отправил USDT — связаться с поддержкой ↗</a>
     </section>
     <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a><a data-support-link href="#" target="_blank" rel="noopener">Поддержка ↗</a></footer>
   </main>

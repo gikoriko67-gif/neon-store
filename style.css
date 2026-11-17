@@ -54,3 +54,8 @@
     width: 100%;
   }
 }
+
+/* Telegram Stars resale section */
+#stars-sell .exchange-panel { min-width: 0; }
+#stars-sell .amount-wrap input { min-width: 0; }
+#stars-sell .result-box strong { color: #72dcb9; }

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e1b">
+  <title>Продажа Telegram Stars → RUB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <header class="topbar wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a>
+    <a class="top-cta" href="index.html#stars-sell">← Назад к продаже Stars</a>
+  </header>
+  <main class="wrap payment-page">
+    <div class="eyebrow">TELEGRAM STARS → RUB / TRANSFER</div>
+    <h1 class="payment-title">Продажа <span>Stars</span></h1>
+    <p class="payment-intro">Проверьте количество Stars и реквизиты для выплаты. Затем перейдите к Telegram-боту, чтобы отправить звёзды.</p>
+    <section class="exchange-panel payment-summary-panel">
+      <div class="panel-top"><span>ДЕТАЛИ ОБМЕНА</span><span class="live-dot">● ПРОВЕРЬТЕ ДАННЫЕ</span></div>
+      <div class="summary-grid">
+        <div class="summary-tile"><span>СУММА ОТПРАВКИ</span><b id="stars-pay-amount">— ⭐</b></div>
+        <div class="summary-tile"><span>К ПОЛУЧЕНИЮ</span><b id="stars-pay-rub">— ₽</b></div>
+        <div class="summary-tile"><span>СПОСОБ ПОЛУЧЕНИЯ РУБЛЕЙ</span><b id="stars-payout-method">—</b></div>
+        <div class="summary-tile"><span>РЕКВИЗИТЫ ДЛЯ ВЫПЛАТЫ</span><b id="stars-payout-destination">—</b></div>
+      </div>
+    </section>
+    <section class="exchange-panel wallet-panel">
+      <div class="panel-top"><span>ОТПРАВКА TELEGRAM STARS</span><span class="live-dot">● TELEGRAM</span></div>
+      <h2 class="wallet-title">Перейдите к боту и отправьте Stars</h2>
+      <p class="payment-intro">Откройте официальную ссылку на бота, следуйте его инструкциям и отправьте указанное количество Stars.</p>
+      <a class="btn primary full" id="stars-bot-link" href="#" target="_blank" rel="noopener">Перейти к боту и отправить Stars ↗</a>
+      <p id="stars-bot-missing" class="small-muted hidden">Ссылка на бота ещё не настроена. Добавьте её в поле starsSellBotUrl файла config.js.</p>
+      <div class="warning-panel">Перед отправкой убедитесь, что открыли именно официальный бот магазина и указали правильное количество Stars. Не отправляйте звёзды по ссылкам из сообщений посторонних лиц.</div>
+    </section>
+    <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a><a data-support-link href="#" target="_blank" rel="noopener">Поддержка ↗</a></footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="config.js"></script>
+  <script src="stars-payment.js"></script>
+</body>
+</html>

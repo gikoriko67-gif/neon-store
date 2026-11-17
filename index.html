@@ -15,6 +15,7 @@
     <nav>
       <a href="#store">Магазин</a>
       <a href="#exchange">Обменник</a>
+      <a href="#stars-sell">Продать Stars</a>
       <a href="#how">Как это работает</a>
     </nav>
     <a class="top-cta" href="#store">Перейти к покупке <span>↗</span></a>
@@ -24,8 +25,8 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow"><i></i> DIGITAL GOODS · USDT EXCHANGE</div>
-        <h1>Твои цифровые<br><span>возможности.</span></h1>
-        <p>Покупай цифровые продукты и оставляй заявку на обмен USDT на рубли — просто и понятно.</p>
+        <h1>Ваши цифровые<br><span>возможности.</span></h1>
+        <p>Покупайте цифровые продукты и обменивайте USDT на рубли — просто и удобно.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#store">Открыть магазин <span>→</span></a>
           <a class="btn ghost" href="#exchange">Обменять USDT</a>
@@ -48,33 +49,33 @@
     </section>
 
     <section id="store" class="section">
-      <div class="section-head"><div><div class="eyebrow">01 / DIGITAL STORE</div><h2>Магазин</h2></div><p>Выбери удобный способ оплаты и получи нужные реквизиты.</p></div>
+      <div class="section-head"><div><div class="eyebrow">01 / DIGITAL STORE</div><h2>Магазин</h2></div><p>Выберите удобный способ оплаты и получите необходимые реквизиты.</p></div>
       <article class="product-card">
         <div class="product-visual"><div class="product-glow"></div><div class="product-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="window-code"><span>01</span> SYSTEM READY<br><span>02</span> MODULE LOADED<br><span>03</span> ACCESS GRANTED</div><div class="window-chip">PREMIUM MOD</div></div><div class="product-stamp">DIGITAL<br>PRODUCT</div></div>
         <div class="product-info">
           <div class="product-tag">ЦИФРОВОЙ ПРОДУКТ</div>
           <h3 data-product-name>Мой мод</h3>
-          <p>Доступ к цифровому продукту. После оплаты перейди по инструкции или свяжись с поддержкой.</p>
+          <p>Доступ к цифровому продукту. После оплаты следуйте инструкции или свяжитесь с поддержкой.</p>
           <div class="price-row"><strong>5 <small>USDT</small></strong><span>или</span><strong>300 <small>⭐</small></strong></div>
           <div class="payment-options">
             <button class="pay-option" data-pay="usdt"><span class="pay-icon usdt">₮</span><span><b>Оплатить USDT</b><small>Сеть TRC20</small></span><em>→</em></button>
             <button class="pay-option" data-pay="stars"><span class="pay-icon stars">★</span><span><b>Оплатить Stars</b><small>Telegram Stars</small></span><em>→</em></button>
           </div>
-          <div class="fineprint">Нажимая кнопку, ты переходишь к выбранному способу оплаты. Сайт не проверяет поступление платежа автоматически.</div>
+          <div class="fineprint">Нажимая кнопку, Вы переходите к выбранному способу оплаты. Сайт не проверяет поступление платежа автоматически.</div>
         </div>
       </article>
     </section>
 
     <section id="exchange" class="section exchange-section">
-      <div class="section-head"><div><div class="eyebrow">02 / EXCHANGE</div><h2>Обмен USDT → RUB</h2></div><p>Рассчитай сумму, укажи реквизиты для выплаты и перейди к оплате.</p></div>
+      <div class="section-head"><div><div class="eyebrow">02 / EXCHANGE</div><h2>Обмен USDT → RUB</h2></div><p>Рассчитайте сумму, укажите реквизиты для выплаты и перейдите к переводу.</p></div>
       <div class="exchange-grid">
         <div class="exchange-panel">
           <div class="panel-top"><span>КАЛЬКУЛЯТОР ОБМЕНА</span><span class="live-dot">● ДОСТУПЕН</span></div>
-          <label for="amount">Сколько USDT хочешь обменять?</label>
+          <label for="amount">Сколько USDT Вы хотите обменять?</label>
           <div class="amount-wrap"><input id="amount" type="number" min="5" step="0.01" value="5"><span>USDT</span></div>
           <div class="range-note">Минимальная сумма: <b>5 USDT</b></div>
           <div class="rate-line"><span>Текущий курс</span><b>1 USDT = <span data-rate>90</span> ₽</b></div>
-          <div class="result-box"><span>Предварительная сумма к выплате</span><strong id="rub-result">450 ₽</strong></div>
+          <div class="result-box"><span>К получению</span><strong id="rub-result">450 ₽</strong></div>
           <div class="payout-entry">
             <div class="payout-entry-title">Куда отправить рубли?</div>
             <div class="payout-options">
@@ -83,25 +84,61 @@
             </div>
             <label class="field-label" id="exchange-destination-label" for="exchange-destination">Номер телефона для выплаты</label>
             <input class="destination-input" id="exchange-destination" type="tel" autocomplete="off" placeholder="+7 900 000-00-00" maxlength="32">
-            <p class="small-muted">Указывай только номер телефона или карты. Не вводи CVV/CVC, PIN-код, срок действия карты или банковские пароли.</p>
+            <p class="small-muted">Указывайте только номер телефона или карты. Не вводите CVV/CVC, PIN-код, срок действия карты или банковские пароли.</p>
           </div>
           <button class="btn primary full" id="exchange-submit">Обменять USDT на RUB <span>→</span></button>
-          <p class="small-muted">На следующем шаге появятся адрес кошелька и инструкция по переводу USDT. Выплата рублей производится вручную после проверки поступления.</p>
+          <p class="small-muted">На следующем шаге Вы увидите адрес кошелька и инструкцию по переводу USDT. Выплата производится после проверки поступления.</p>
         </div>
         <div class="exchange-side">
-          <div class="side-icon">⇄</div><h3>Прозрачный расчёт</h3><p>Укажи количество USDT — калькулятор сразу покажет ориентировочную сумму в рублях.</p>
+          <div class="side-icon">⇄</div><h3>Прозрачный расчёт</h3><p>Укажите количество USDT — калькулятор сразу покажет ориентировочную сумму в рублях.</p>
           <ul><li><span>✓</span> Сеть депозита — TRC20</li><li><span>✓</span> Минимум — 5 USDT</li><li><span>✓</span> Выплата на карту или телефон</li></ul>
           <div class="rate-badge"><span>ФИКСИРОВАННЫЙ КУРС</span><b>90 ₽ <small>/ USDT</small></b></div>
         </div>
       </div>
     </section>
 
+
+    <section id="stars-sell" class="section exchange-section">
+      <div class="section-head">
+        <div><div class="eyebrow">03 / STARS EXCHANGE</div><h2>Продажа Telegram Stars → RUB</h2></div>
+        <p>Укажите количество Stars и реквизиты для получения рублей.</p>
+      </div>
+      <div class="exchange-grid">
+        <div class="exchange-panel">
+          <div class="panel-top"><span>КАЛЬКУЛЯТОР ПРОДАЖИ STARS</span><span class="live-dot">● ДОСТУПЕН</span></div>
+          <label for="stars-amount">Сколько Stars Вы хотите продать?</label>
+          <div class="amount-wrap"><input id="stars-amount" type="number" min="300" step="1" value="300"><span>⭐</span></div>
+          <div class="range-note">Минимум для продажи: <b>300 ⭐</b></div>
+          <div class="rate-line"><span>Курс продажи</span><b><span data-stars-rate>—</span> ₽ / ⭐</b></div>
+          <div class="result-box"><span>К получению</span><strong id="stars-rub-result">Укажите курс</strong></div>
+          <div class="payout-entry">
+            <div class="payout-entry-title">Куда отправить рубли?</div>
+            <div class="payout-options">
+              <label class="payout-option"><input type="radio" name="stars-payout" value="phone" checked><span class="radio-dot"></span><span><b>По номеру телефона</b><small>Перевод по СБП</small></span></label>
+              <label class="payout-option"><input type="radio" name="stars-payout" value="card"><span class="radio-dot"></span><span><b>По номеру карты</b><small>Банковская карта</small></span></label>
+            </div>
+            <label class="field-label" id="stars-destination-label" for="stars-destination">Номер телефона для выплаты</label>
+            <input class="destination-input" id="stars-destination" type="tel" autocomplete="off" placeholder="+7 900 000-00-00" maxlength="32">
+            <p class="small-muted">Указывайте только номер телефона или карты. Не вводите CVV/CVC, PIN-код, срок действия карты или банковские пароли.</p>
+          </div>
+          <button class="btn primary full" id="stars-sell-submit">Продать Stars <span>→</span></button>
+          <p class="small-muted">На следующем шаге Вы получите ссылку на Telegram-бота для отправки Stars.</p>
+        </div>
+        <div class="exchange-side">
+          <div class="side-icon">★</div><h3>Продажа Telegram Stars</h3>
+          <p>Укажите количество звёзд, выберите способ получения рублей и перейдите к боту.</p>
+          <ul><li><span>✓</span> Минимум — 300 ⭐</li><li><span>✓</span> Выплата на карту или телефон</li><li><span>✓</span> Отправка через Telegram-бота</li></ul>
+          <div class="rate-badge"><span>КУРС ПРОДАЖИ</span><b><span data-stars-rate>—</span> ₽ <small>/ ⭐</small></b></div>
+        </div>
+      </div>
+    </section>
+
     <section id="how" class="section how-section">
-      <div class="section-head"><div><div class="eyebrow">03 / SIMPLE PROCESS</div><h2>Как это работает</h2></div></div>
+      <div class="section-head"><div><div class="eyebrow">04 / SIMPLE PROCESS</div><h2>Как это работает</h2></div></div>
       <div class="steps">
-        <div class="step"><span>01</span><b>Выбери услугу</b><p>Покупка цифрового продукта или заявка на обмен.</p></div>
-        <div class="step"><span>02</span><b>Получи реквизиты</b><p>Скопируй адрес или перейди по платёжной ссылке.</p></div>
-        <div class="step"><span>03</span><b>Свяжись с нами</b><p>Отправь подтверждение оплаты в Telegram.</p></div>
+        <div class="step"><span>01</span><b>Выберите услугу</b><p>Покупка цифрового продукта или обмен.</p></div>
+        <div class="step"><span>02</span><b>Получите реквизиты</b><p>Скопируйте адрес или перейдите по платёжной ссылке.</p></div>
+        <div class="step"><span>03</span><b>Свяжитесь с нами</b><p>Отправьте подтверждение оплаты в Telegram.</p></div>
       </div>
     </section>
   </main>
@@ -117,10 +154,10 @@
       <div class="detail-label">СУММА</div><b data-usdt-price>5.00 USDT</b>
       <div class="detail-label">АДРЕС КОШЕЛЬКА</div><div class="address-line"><code id="wallet-address">АДРЕС НЕ НАСТРОЕН</code><button id="copy-address" class="copy-btn">Копировать</button></div>
     </div>
-    <div id="stars-details" class="details-box hidden"><div class="detail-label">ОПЛАТА</div><b>300 Telegram Stars</b><p>Нажми кнопку ниже, чтобы открыть платёжную ссылку Telegram.</p></div>
+    <div id="stars-details" class="details-box hidden"><div class="detail-label">ОПЛАТА</div><b>300 Telegram Stars</b><p>Нажмите кнопку ниже, чтобы открыть платёжную ссылку Telegram.</p></div>
     <a id="payment-link" class="btn primary full hidden" href="#" target="_blank" rel="noopener">Перейти к оплате ↗</a>
     <a id="support-link" class="text-link" href="#" target="_blank" rel="noopener">Написать в поддержку ↗</a>
-    <p class="modal-warning">Важно: перевод выполняется вручную. Перед отправкой средств внимательно проверь сеть, сумму и адрес.</p>
+    <p class="modal-warning">Важно: перевод выполняется вручную. Перед отправкой средств внимательно проверьте сеть, сумму и адрес.</p>
   </dialog>
   <div id="toast" class="toast" role="status"></div>
   <script src="config.js"></script>

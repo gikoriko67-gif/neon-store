@@ -16,7 +16,7 @@
 
   const validAmount = Number.isFinite(amount) && amount >= min;
   if (!validAmount || !payout || !payout.value || !['phone', 'card'].includes(payout.type)) {
-    $('.payment-intro').textContent = 'Данные обмена не найдены. Вернись в обменник, укажи сумму и реквизиты для выплаты, затем нажми «Обменять USDT на RUB».';
+    $('.payment-intro').textContent = 'Данные обмена не найдены. Вернитесь в обменник, укажите сумму и реквизиты для выплаты, затем нажмите «Обменять USDT на RUB».';
     $('#pay-amount').textContent = '—';
     $('#pay-rub').textContent = '—';
     $('#payout-method').textContent = '—';
@@ -32,7 +32,7 @@
   $('#payout-destination').textContent = payout.value;
 
   const support = (cfg.supportTelegram || '').replace(/\/$/, '');
-  const message = `Здравствуйте! Я отправляю ${fmt(amount)} USDT в сети TRC20 для обмена на ${fmt(rub)} RUB. Способ выплаты: ${payout.type === 'phone' ? 'по номеру телефона' : 'на банковскую карту'}. Реквизиты: ${payout.value}. После перевода пришлю TXID.`;
+  const message = `Здравствуйте! Я отправляю ${fmt(amount)} USDT в сети TRC20 для обмена на ${fmt(rub)} RUB. Способ выплаты: ${payout.type === 'phone' ? 'по номеру телефона' : 'на банковскую карту'}. Реквизиты: ${payout.value}. После перевода отправьте TXID.`;
   if (support && support !== 'https://t.me') {
     $('#notify-support').href = `${support}?text=${encodeURIComponent(message)}`;
   } else {
@@ -49,7 +49,7 @@
       const selection = window.getSelection();
       selection.removeAllRanges();
       selection.addRange(range);
-      $('#copy-exchange-wallet').textContent = 'Выдели и скопируй адрес';
+      $('#copy-exchange-wallet').textContent = 'Выделите и скопируйте адрес';
     }
   });
 })();

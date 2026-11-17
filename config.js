@@ -4,9 +4,12 @@ window.SITE_CONFIG = {
   productName: "Мой мод",
   productUsdtPrice: "5.00",
   productStarsPrice: "300",
-  usdtWalletAddress: "", // Вставь адрес кошелька USDT TRC20
-  starsPaymentUrl: "",   // Вставь ссылку Telegram для оплаты Stars
-  supportTelegram: "https://t.me/", // Вставь ссылку на свой Telegram
+  usdtWalletAddress: "", // Укажите адрес кошелька USDT TRC20
+  starsPaymentUrl: "",   // Укажите ссылку Telegram для оплаты Stars
+  supportTelegram: "https://t.me/", // Укажите ссылку на Telegram поддержки
   exchangeRateRub: 90,
-  exchangeMinimumUsdt: 5
+  exchangeMinimumUsdt: 5,
+  starsSellMinimum: 300,
+  starsSellRateRub: 0, // Укажите сумму в рублях за 1 Star
+  starsSellBotUrl: "" // Вставьте ссылку на Telegram-бота для приёма Stars
 };

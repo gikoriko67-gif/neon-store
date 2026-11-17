@@ -57,11 +57,6 @@
     const value = Number(amount.value);
     const min = Number(cfg.exchangeMinimumUsdt || 5);
     if (!Number.isFinite(value) || value < min) return toast(`Минимум для обмена — ${min} USDT`);
-    const rub = format(value * Number(cfg.exchangeRateRub || 90));
-    const msg = `Здравствуйте! Хочу оставить заявку на обмен ${format(value)} USDT TRC20. Предварительная сумма: ${rub} RUB.`;
-    const telegram = cfg.supportTelegram || '';
-    if (!telegram || telegram === 'https://t.me/') return toast('Сначала укажи Telegram поддержки в config.js');
-    const url = `${telegram.replace(/\/$/, '')}?text=${encodeURIComponent(msg)}`;
-    window.open(url, '_blank', 'noopener');
+    window.location.href = `payment.html?amount=${encodeURIComponent(value)}`;
   });
 })();

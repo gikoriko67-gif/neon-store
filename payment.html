@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e1b">
+  <title>Оплата обмена USDT → RUB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <header class="topbar wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a>
+    <a class="top-cta" href="index.html#exchange">← Назад к обменнику</a>
+  </header>
+  <main class="wrap payment-page">
+    <div class="eyebrow">USDT → RUB / PAYMENT</div>
+    <h1 class="payment-title">Получение <span>рублей</span></h1>
+    <p class="payment-intro">Укажи, куда отправить выплату. После этого появятся реквизиты для перевода USDT.</p>
+
+    <div class="payment-layout">
+      <section class="exchange-panel">
+        <div class="panel-top"><span>ШАГ 1 / РЕКВИЗИТЫ ВЫПЛАТЫ</span><span class="live-dot">● TRC20</span></div>
+        <div class="summary-row"><span>Сумма обмена</span><b id="pay-amount">— USDT</b></div>
+        <div class="summary-row"><span>Предварительная выплата</span><b class="rub-highlight" id="pay-rub">— RUB</b></div>
+        <div class="field-label">Куда отправить рубли?</div>
+        <div class="payout-options">
+          <label class="payout-option"><input type="radio" name="payout" value="phone" checked><span class="radio-dot"></span><span><b>По номеру телефона</b><small>Перевод по СБП / номеру телефона</small></span></label>
+          <label class="payout-option"><input type="radio" name="payout" value="card"><span class="radio-dot"></span><span><b>По номеру карты</b><small>Банковская карта</small></span></label>
+        </div>
+        <label class="field-label" id="destination-label" for="destination">Номер телефона для выплаты</label>
+        <input class="destination-input" id="destination" type="tel" autocomplete="off" placeholder="+7 900 000-00-00" maxlength="32">
+        <p class="small-muted">Проверь номер внимательно. Не указывай срок действия карты, CVV/CVC, PIN-код или пароль от банка.</p>
+        <button class="btn primary full" id="show-wallet">Продолжить к отправке USDT <span>→</span></button>
+        <p class="small-muted">Реквизиты выплаты вводятся только в этой вкладке и не сохраняются на сайте. Не обновляй страницу до завершения шага.</p>
+      </section>
+
+      <section class="exchange-side">
+        <div class="side-icon">₮</div><h3>Оплата в сети TRC20</h3>
+        <p>Отправляй только USDT в сети TRON (TRC20). Перевод через другую сеть может привести к потере средств.</p>
+        <div class="rate-badge"><span>КУРС ОБМЕНА</span><b><span id="rate">90</span> ₽ <small>/ USDT</small></b></div>
+      </section>
+    </div>
+
+    <section class="exchange-panel wallet-panel hidden" id="wallet-panel">
+      <div class="panel-top"><span>ШАГ 2 / ПЕРЕВОД USDT</span><span class="live-dot">● TRC20 ONLY</span></div>
+      <h2 class="wallet-title">Отправь USDT на адрес</h2>
+      <div class="wallet-summary"><span id="wallet-amount">— USDT</span><span>Сеть: <b>TRON (TRC20)</b></span></div>
+      <div class="detail-label">АДРЕС КОШЕЛЬКА ДЛЯ ПОЛУЧЕНИЯ USDT</div>
+      <div class="address-line wallet-address-line"><code id="exchange-wallet">TWNe16cgaRHS9APMiVH9DBQTFDxq6S73eF</code><button id="copy-exchange-wallet" class="copy-btn">Копировать</button></div>
+      <div class="warning-panel">Внимательно проверь сеть TRC20 и адрес перед отправкой. Отправляй ровно указанную сумму. Не отправляй USDT через ERC20, BEP20 или другую сеть.</div>
+      <div class="payout-confirm" id="payout-confirm"></div>
+      <a class="btn primary full" id="notify-support" href="#" target="_blank" rel="noopener">Сообщить о переводе в Telegram ↗</a>
+      <p class="small-muted">Сайт не видит блокчейн-транзакции и не подтверждает оплату автоматически. После перевода нажми кнопку выше и отправь сообщение поддержке с данными заявки и TXID транзакции. Выплата рублей производится вручную после проверки поступления.</p>
+    </section>
+    <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a><a data-support-link href="#" target="_blank" rel="noopener">Поддержка ↗</a></footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="config.js"></script>
+  <script src="payment.js"></script>
+</body>
+</html>

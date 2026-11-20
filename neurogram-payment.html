@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e1b">
+  <title>Оплата NeuroGram — USDT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <header class="topbar wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a>
+    <a class="top-cta" href="index.html#store">← Назад в магазин</a>
+  </header>
+  <main class="wrap payment-page">
+    <div class="eyebrow">NEUROGRAM / USDT CHECKOUT</div>
+    <h1 class="payment-title">Оплата <span>NeuroGram</span></h1>
+    <p class="payment-intro">Отправьте USDT на указанный адрес — после чего нажмите на кнопку «Отправил». После проверки платежа Вам будет выдан ключ.</p>
+    <section class="exchange-panel payment-summary-panel">
+      <div class="panel-top"><span>ДЕТАЛИ ПОКУПКИ</span><span class="live-dot">● TRC20</span></div>
+      <div class="summary-grid">
+        <div class="summary-tile"><span>ПРОДУКТ</span><b>NeuroGram</b></div>
+        <div class="summary-tile"><span>СУММА К ОПЛАТЕ</span><b id="product-pay-amount">5 USDT</b></div>
+      </div>
+    </section>
+    <section class="exchange-panel wallet-panel">
+      <div class="panel-top"><span>АДРЕС ДЛЯ ПЕРЕВОДА</span><span class="live-dot">● TRC20</span></div>
+      <h2 class="wallet-title">Отправьте USDT на указанный адрес — после чего нажмите на кнопку «Отправил», система проверит отправку USDT и после чего Вам будет выдан ключ</h2>
+      <div class="network-line"><span>СЕТЬ ПЕРЕВОДА</span><b>TRON (TRC20)</b></div>
+      <div class="detail-label">АДРЕС КОШЕЛЬКА ДЛЯ ОТПРАВКИ USDT</div>
+      <div class="address-line wallet-address-line">
+        <code id="product-wallet">TWNe16cgaRHS9APMiVH9DBQTFDxq6S73eF</code>
+        <button id="copy-product-wallet" class="copy-btn" type="button">Копировать адрес</button>
+      </div>
+      <div class="warning-panel">Важно: отправляйте только USDT в сети TRON (TRC20). Перед отправкой проверьте сумму и адрес. Не отправляйте средства из другой сети.</div>
+      <div class="txid-entry">
+        <label class="field-label" for="product-txid">Хеш транзакции (TXID)</label>
+        <input class="destination-input" id="product-txid" type="text" placeholder="Вставьте TXID после отправки USDT" autocomplete="off">
+        <button class="btn primary full" id="product-sent" type="button">Отправил</button>
+        <p class="small-muted" id="product-check-note">После нажатия TXID будет передан в поддержку для проверки. Автоматическая проверка и автоматическая выдача ключа требуют подключения серверной части.</p>
+      </div>
+    </section>
+    <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a><a data-support-link href="#" target="_blank" rel="noopener">Поддержка ↗</a></footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="config.js"></script>
+  <script src="neurogram-payment.js"></script>
+</body>
+</html>

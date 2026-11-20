@@ -1,7 +1,7 @@
 /* Настройки сайта. Замени значения на свои перед публикацией. */
 window.SITE_CONFIG = {
   storeName: "NEON STORE",
-  productName: "Мой мод",
+  productName: "NeuroGram",
   productUsdtPrice: "5.00",
   productStarsPrice: "300",
   usdtWalletAddress: "", // Укажите адрес кошелька USDT TRC20

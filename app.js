@@ -37,6 +37,8 @@
     dialog.showModal();
   }
   document.querySelectorAll('[data-pay]').forEach(btn => btn.addEventListener('click', () => openPayment(btn.dataset.pay)));
+  const productUsdtButton = $('#product-usdt-pay');
+  if (productUsdtButton) productUsdtButton.addEventListener('click', () => { window.location.href = 'neurogram-payment.html'; });
   $('[data-close]').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
   $('#copy-address').addEventListener('click', async () => {

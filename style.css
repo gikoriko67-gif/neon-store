@@ -62,3 +62,11 @@
 
 /* Курс продажи: число должно быть такого же размера, как знак рубля. */
 .rate-badge b > span[data-stars-rate]{display:inline;font:inherit;letter-spacing:normal;color:inherit}
+
+/* NeuroGram product details and payment confirmation */
+.product-description{line-height:1.9!important}
+.txid-entry{margin-top:18px;padding-top:16px;border-top:1px solid #283750}
+.txid-entry .field-label{margin-top:0}
+.txid-entry .btn{margin-top:12px}
+.txid-entry .small-muted{font-size:10px;line-height:1.65;color:#9eafc8;margin:12px 0 0}
+.btn:disabled{opacity:.45;cursor:not-allowed}

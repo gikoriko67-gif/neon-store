@@ -18,16 +18,14 @@
   });
 
   $('#product-sent').addEventListener('click', async () => {
-    const txid = $('#product-txid').value.trim();
-    if (!txid) return toast('Сначала вставьте хеш транзакции (TXID)');
     const support = (cfg.supportTelegram || '').replace(/\/$/, '');
-    const message = `Здравствуйте! Я оплатил NeuroGram: ${cfg.productUsdtPrice || '5.00'} USDT в сети TRC20. TXID: ${txid}. Прошу проверить оплату и выдать ключ.`;
+    const message = `Здравствуйте! Я отправил оплату за NeuroGram: ${cfg.productUsdtPrice || '5.00'} USDT в сети TRC20 на адрес ${wallet}. Прошу проверить поступление платежа и после подтверждения выдать ключ.`;
     if (/^https?:\/\/t\.me\/[A-Za-z0-9_]{5,}$/.test(support)) {
       window.open(`${support}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
-      toast('Откройте Telegram и отправьте сообщение для ручной проверки');
+      toast('Отправьте подготовленное сообщение поддержке для проверки');
     } else {
-      try { await navigator.clipboard.writeText(message); toast('Сообщение с TXID скопировано. Отправьте его в поддержку Telegram.'); }
-      catch (_) { toast('Поддержка не настроена. Скопируйте TXID и передайте его оператору вручную.'); }
+      try { await navigator.clipboard.writeText(message); toast('Сообщение скопировано. Отправьте его в поддержку Telegram.'); }
+      catch (_) { toast('Укажите ссылку поддержки в config.js, чтобы отправить заявку.'); }
     }
   });
 })();

@@ -95,3 +95,14 @@
 .bank-option { min-height:48px; border:1px solid #304561; border-radius:10px; padding:12px 14px; background:#0e192b; color:#eaf2ff; text-align:left; font:600 12px Manrope,Arial,sans-serif; cursor:pointer; }
 .bank-option:hover,.bank-option:focus { border-color:#559cff; background:#172943; outline:none; }
 @media(max-width:600px){.bank-list{grid-template-columns:1fr}.gift-action + .gift-action{margin-top:10px}}
+
+
+/* Top support and reviews banner */
+.support-banner{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-top:22px;margin-bottom:18px;padding:18px 20px;border:1px solid #3975bd;border-radius:14px;background:linear-gradient(110deg,#142b49 0%,#172b49 55%,#202c52 100%);box-shadow:0 12px 32px #0004}
+.support-banner-copy{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.support-banner-copy strong{color:#f2f7ff;font-size:15px;line-height:1.55}
+.support-banner-link{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border-radius:9px;background:#2585f5;color:#fff;font-weight:800;text-decoration:none;white-space:nowrap;box-shadow:0 5px 18px #2585f555}
+.support-banner-link:hover{background:#4599ff}
+.reviews-cta{display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 22px;border-radius:11px;background:linear-gradient(100deg,#ffbd45,#ff8b32);color:#201405;text-decoration:none;font-size:15px;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 24px #ff9d3544;white-space:nowrap}
+.reviews-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+@media(max-width:760px){.support-banner{grid-template-columns:1fr}.support-banner-copy{align-items:flex-start;flex-direction:column}.reviews-cta{width:100%;white-space:normal}.support-banner-copy strong{font-size:14px}}

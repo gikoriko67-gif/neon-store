@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0b1020">
   <meta name="description" content="Магазин цифровых товаров и обмен USDT на RUB">
   <title>Магазин и обменник</title>
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -20,6 +20,14 @@
     </nav>
     <a class="top-cta" href="#store">Перейти к покупке <span>↗</span></a>
   </header>
+
+  <section class="support-banner wrap" aria-label="Поддержка и отзывы">
+    <div class="support-banner-copy">
+      <strong>Есть вопросы, сомнения или возникла проблема? Не стесняйтесь писать в поддержку.</strong>
+      <a class="support-banner-link" href="https://t.me/SoftgameV4seller" target="_blank" rel="noopener">Поддержка ↗</a>
+    </div>
+    <a class="reviews-cta" href="https://t.me/OtziviRustSoft" target="_blank" rel="noopener">★ Читать отзывы о NEON STORE ↗</a>
+  </section>
 
   <main id="home" class="wrap">
     <section class="hero">
@@ -107,8 +115,8 @@
         <div class="exchange-panel">
           <div class="panel-top"><span>КАЛЬКУЛЯТОР ПРОДАЖИ STARS</span><span class="live-dot">● ДОСТУПЕН</span></div>
           <label for="stars-amount">Сколько Stars Вы хотите продать?</label>
-          <div class="amount-wrap"><input id="stars-amount" type="number" min="300" step="1" value="300"><span>⭐</span></div>
-          <div class="range-note">Минимум для продажи: <b>300 ⭐</b></div>
+          <div class="amount-wrap"><input id="stars-amount" type="number" min="315" step="5" value="315"><span>⭐</span></div>
+          <div class="range-note">Минимум для продажи: <b>315 ⭐</b></div>
           <div class="rate-line"><span>Курс продажи</span><b><span data-stars-rate>—</span> ₽ / ⭐</b></div>
           <div class="result-box"><span>К получению</span><strong id="stars-rub-result">Укажите курс</strong></div>
           <div class="payout-entry">
@@ -127,7 +135,7 @@
         <div class="exchange-side">
           <div class="side-icon">★</div><h3>Продажа Telegram Stars</h3>
           <p>Укажите количество звёзд, выберите способ получения рублей и перейдите к боту.</p>
-          <ul><li><span>✓</span> Минимум — 300 ⭐</li><li><span>✓</span> Выплата на карту или телефон</li><li><span>✓</span> Отправка через Telegram-бота</li></ul>
+          <ul><li><span>✓</span> Минимум — 315 ⭐</li><li><span>✓</span> Выплата на карту или телефон</li><li><span>✓</span> Отправка через Telegram-бота</li></ul>
           <div class="rate-badge"><span>КУРС ПРОДАЖИ</span><b><span data-stars-rate>—</span> ₽ <small>/ ⭐</small></b></div>
         </div>
       </div>
@@ -138,7 +146,7 @@
       <div class="steps">
         <div class="step"><span>01</span><b>Выберите услугу</b><p>Покупка цифрового продукта или обмен.</p></div>
         <div class="step"><span>02</span><b>Получите реквизиты</b><p>Скопируйте адрес или перейдите по платёжной ссылке.</p></div>
-        <div class="step"><span>03</span><b>Свяжитесь с нами</b><p>Отправьте подтверждение оплаты в Telegram.</p></div>
+        <div class="step"><span>03</span><b>Оплатите и получите товар</b><p>После оплаты получите выбранный товар.</p></div>
       </div>
     </section>
   </main>
@@ -160,7 +168,7 @@
     <p class="modal-warning">Важно: перевод выполняется вручную. Перед отправкой средств внимательно проверьте сеть, сумму и адрес.</p>
   </dialog>
   <div id="toast" class="toast" role="status"></div>
-  <script src="config.js?v=14"></script>
-  <script src="app.js?v=14"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

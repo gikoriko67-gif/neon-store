@@ -23,7 +23,7 @@
         <div class="summary-tile"><span>СУММА ОТПРАВКИ</span><b id="stars-pay-amount">— ⭐</b></div>
         <div class="summary-tile"><span>К ПОЛУЧЕНИЮ</span><b id="stars-pay-rub">— ₽</b></div>
         <div class="summary-tile"><span>СПОСОБ ПОЛУЧЕНИЯ РУБЛЕЙ</span><b id="stars-payout-method">—</b></div>
-        <div class="summary-tile"><span>РЕКВИЗИТЫ ДЛЯ ВЫПЛАТЫ</span><b id="stars-payout-destination">—</b></div>
+        <div class="summary-tile"><span>РЕКВИЗИТЫ ДЛЯ ВЫПЛАТЫ</span><b id="stars-payout-destination">—</b></div><div class="summary-tile"><span>БАНК ПОЛУЧАТЕЛЯ</span><b id="stars-payout-bank">—</b></div>
       </div>
     </section>
     <section class="exchange-panel wallet-panel">
@@ -32,9 +32,10 @@
       <p class="payment-intro">После отправки подарков вернитесь на эту страницу и нажмите «Отправил». Выплата будет обработана после ручной проверки.</p>
       <div class="address-line wallet-address-line"><code id="gift-recipient">@SoftgameV4seller</code><button class="copy-btn" id="copy-gift-recipient" type="button">Копировать Username</button></div>
       <p class="small-muted">Аккаунт для отправки звёзд</p>
-      <a class="btn primary full" id="open-gift-recipient" href="https://t.me/SoftgameV4seller" target="_blank" rel="noopener">Открыть аккаунт для отправки подарков ↗</a>
-      <button class="btn primary full" id="stars-sell-sent" type="button">Отправил</button>
-      <div class="warning-panel">Отправляйте только указанные подарки на @SoftgameV4seller. Сохраните подтверждение отправки до обработки выплаты.</div>
+      <a class="btn primary full gift-action" id="open-gift-recipient" href="https://t.me/SoftgameV4seller" target="_blank" rel="noopener">Открыть аккаунт для отправки подарков ↗</a>
+      <button class="btn primary full gift-action" id="stars-sell-sent" type="button">Отправил</button>
+      <p class="payment-status" id="stars-sell-status" role="status" aria-live="polite"></p>
+      <div class="warning-panel">Отправляйте только указанные подарки на @SoftgameV4seller.</div>
     </section>
     <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a><a data-support-link href="#" target="_blank" rel="noopener">Поддержка ↗</a></footer>
   </main>

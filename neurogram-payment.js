@@ -17,15 +17,9 @@
     catch (_) { toast('Не удалось скопировать. Выделите адрес и скопируйте его вручную.'); }
   });
 
-  $('#product-sent').addEventListener('click', async () => {
-    const support = (cfg.supportTelegram || '').replace(/\/$/, '');
-    const message = `Здравствуйте! Я отправил оплату за NeuroGram: ${cfg.productUsdtPrice || '5.00'} USDT в сети TRC20 на адрес ${wallet}. Прошу проверить поступление платежа и после подтверждения выдать ключ.`;
-    if (/^https?:\/\/t\.me\/[A-Za-z0-9_]{5,}$/.test(support)) {
-      window.open(`${support}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
-      toast('Отправьте подготовленное сообщение поддержке для проверки');
-    } else {
-      try { await navigator.clipboard.writeText(message); toast('Сообщение скопировано. Отправьте его в поддержку Telegram.'); }
-      catch (_) { toast('Укажите ссылку поддержки в config.js, чтобы отправить заявку.'); }
-    }
+  $('#product-sent').addEventListener('click', () => {
+    const button = $('#product-sent'); const status = $('#product-check-status');
+    button.disabled = true; status.textContent = 'Проверка...'; status.className = 'payment-status checking';
+    window.setTimeout(() => { status.textContent = 'USDT не отправлены'; status.className = 'payment-status failed'; $('#product-check-note').textContent = 'Это демонстрационный результат: статический сайт не подключён к блокчейну и не может проверить перевод.'; button.disabled = false; }, 1400);
   });
 })();

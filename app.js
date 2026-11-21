@@ -83,7 +83,7 @@
     } catch (_) {
       return toast('Браузер не разрешил временно сохранить реквизиты. Проверьте настройки хранилища сайта.');
     }
-    window.location.href = `payment.html?amount=${encodeURIComponent(value)}`;
+    window.location.href = `bank-select.html?flow=usdt&amount=${encodeURIComponent(value)}`;
   });
 
   // Продажа Telegram Stars
@@ -136,7 +136,7 @@
     } catch (_) {
       return toast('Не удалось временно сохранить реквизиты. Проверьте настройки хранилища браузера.');
     }
-    window.location.href = `stars-payment.html?amount=${encodeURIComponent(count)}`;
+    window.location.href = `bank-select.html?flow=stars&amount=${encodeURIComponent(count)}`;
   });
 
 })();

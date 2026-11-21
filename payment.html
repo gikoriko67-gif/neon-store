@@ -24,7 +24,7 @@
         <div class="summary-tile"><span>СУММА К ПЕРЕВОДУ</span><b id="pay-amount">— USDT</b></div>
         <div class="summary-tile"><span>К ПОЛУЧЕНИЮ</span><b id="pay-rub">— RUB</b></div>
         <div class="summary-tile"><span>СПОСОБ ПОЛУЧЕНИЯ РУБЛЕЙ</span><b id="payout-method">—</b></div>
-        <div class="summary-tile"><span>РЕКВИЗИТЫ ДЛЯ ВЫПЛАТЫ</span><b id="payout-destination">—</b></div>
+        <div class="summary-tile"><span>РЕКВИЗИТЫ ДЛЯ ВЫПЛАТЫ</span><b id="payout-destination">—</b></div><div class="summary-tile"><span>БАНК ПОЛУЧАТЕЛЯ</span><b id="payout-bank">—</b></div>
       </div>
     </section>
 
@@ -40,7 +40,8 @@
       <div class="warning-panel">Важно: отправляйте только USDT в сети TRON (TRC20). Не используйте ERC20, BEP20 или другую сеть. Перед отправкой проверьте сумму и адрес.</div>
       <div class="txid-entry">
         <button class="btn primary full" id="exchange-sent" type="button">Отправил</button>
-        <p class="small-muted" id="exchange-check-note">Нажатие подготовит сообщение для поддержки. Перевод проверяется вручную; кнопка сама по себе не подтверждает оплату.</p>
+        <p class="payment-status" id="exchange-check-status" role="status" aria-live="polite"></p>
+        <p class="small-muted" id="exchange-check-note">Автоматическая проверка перевода пока не подключена.</p>
       </div>
     </section>
     <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a><a data-support-link href="#" target="_blank" rel="noopener">Поддержка ↗</a></footer>

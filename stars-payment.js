@@ -41,6 +41,8 @@
   $('#stars-pay-rub').textContent = `${fmt(amount * rate)} ₽`;
   $('#stars-payout-method').textContent = payout.type === 'phone' ? 'По номеру телефона' : 'На банковскую карту';
   $('#stars-payout-destination').textContent = payout.value;
+  let bank = 'Не выбран'; try { bank = JSON.parse(sessionStorage.getItem('neonStarsBank') || '{}').name || bank; } catch (_) {}
+  const bankEl = $('#stars-payout-bank'); if (bankEl) bankEl.textContent = bank;
   $('#gift-recipient').textContent = recipient;
   $('#open-gift-recipient').href = `https://t.me/${recipient.replace(/^@/, '')}`;
   $('#copy-gift-recipient').addEventListener('click', async () => {
@@ -48,9 +50,15 @@
     catch (_) { $('#copy-gift-recipient').textContent = recipient; }
   });
   $('#stars-sell-sent').addEventListener('click', () => {
-    const msg = `Здравствуйте! Я отправил подарки для продажи ${amount} Stars. К получению: ${fmt(amount * rate)} ₽. Реквизиты: ${payout.type === 'phone' ? 'телефон' : 'карта'} ${payout.value}. Прошу проверить отправку.`;
-    const support = (cfg.supportTelegram || '').replace(/\/$/, '');
-    if (/^https?:\/\/t\.me\/[A-Za-z0-9_]{5,}$/.test(support)) window.open(`${support}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-    else { try { navigator.clipboard.writeText(msg); alert('Заявка скопирована. Отправьте её в поддержку для ручной проверки.'); } catch (_) { alert('Свяжитесь с поддержкой и сообщите, что подарки отправлены.'); } }
+    const button = $('#stars-sell-sent');
+    const status = $('#stars-sell-status');
+    button.disabled = true;
+    status.textContent = 'Проверка...';
+    status.className = 'payment-status checking';
+    window.setTimeout(() => {
+      status.textContent = 'Подарки не отправлены';
+      status.className = 'payment-status failed';
+      button.disabled = false;
+    }, 1400);
   });
 })();

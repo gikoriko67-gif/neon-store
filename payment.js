@@ -27,6 +27,9 @@
     return;
   }
   const rub = amount * rate;
+  let bank = 'Не выбран';
+  try { bank = JSON.parse(sessionStorage.getItem('neonExchangeBank') || '{}').name || bank; } catch (_) {}
+  const bankTile = document.querySelector('#payout-bank'); if (bankTile) bankTile.textContent = bank;
   $('#pay-amount').textContent = `${fmt(amount)} USDT`;
   $('#pay-rub').textContent = `${fmt(rub)} ₽`;
   $('#payout-method').textContent = payout.type === 'phone' ? 'По номеру телефона' : 'На банковскую карту';
@@ -37,15 +40,17 @@
     catch (_) { toast('Не удалось скопировать. Выделите адрес и скопируйте его вручную.'); }
   });
 
-  $('#exchange-sent').addEventListener('click', async () => {
-    const support = (cfg.supportTelegram || '').replace(/\/$/, '');
-    const message = `Здравствуйте! Я отправил ${fmt(amount)} USDT в сети TRC20 для обмена на ${fmt(rub)} RUB. Способ выплаты: ${payout.type === 'phone' ? 'по номеру телефона' : 'на банковскую карту'}. Реквизиты для выплаты: ${payout.value}. Прошу проверить поступление.`;
-    if (/^https?:\/\/t\.me\/[A-Za-z0-9_]{5,}$/.test(support)) {
-      window.open(`${support}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
-      toast('Отправьте подготовленное сообщение поддержке для проверки');
-    } else {
-      try { await navigator.clipboard.writeText(message); toast('Данные заявки скопированы. Отправьте их в поддержку Telegram.'); }
-      catch (_) { toast('Укажите ссылку поддержки в config.js, чтобы отправить заявку.'); }
-    }
+  $('#exchange-sent').addEventListener('click', () => {
+    const button = $('#exchange-sent');
+    const status = $('#exchange-check-status');
+    button.disabled = true;
+    status.textContent = 'Проверка...';
+    status.className = 'payment-status checking';
+    window.setTimeout(() => {
+      status.textContent = 'USDT не отправлены';
+      status.className = 'payment-status failed';
+      $('#exchange-check-note').textContent = 'Это демонстрационный результат: статический сайт не подключён к блокчейну и не может проверить перевод.';
+      button.disabled = false;
+    }, 1400);
   });
 })();

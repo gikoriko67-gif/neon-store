@@ -84,3 +84,14 @@
 .txid-entry .btn{margin-top:0}
 .txid-entry .small-muted{font-size:10px;line-height:1.65;color:#9eafc8;margin:12px 0 0}
 @media(max-width:760px){.product-visual{padding:14px;min-height:255px}.product-demo-video{min-height:225px}.product-description{font-size:13px}}
+
+/* Payment actions, status feedback and bank picker */
+.gift-action + .gift-action { margin-top: 12px; }
+.payment-status { min-height: 0; margin: 12px 0 0; font-size: 13px; font-weight: 800; }
+.payment-status:empty { display: none; }
+.payment-status.checking { color: #f2c66d; }
+.payment-status.failed { color: #ff8585; }
+.bank-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:16px; }
+.bank-option { min-height:48px; border:1px solid #304561; border-radius:10px; padding:12px 14px; background:#0e192b; color:#eaf2ff; text-align:left; font:600 12px Manrope,Arial,sans-serif; cursor:pointer; }
+.bank-option:hover,.bank-option:focus { border-color:#559cff; background:#172943; outline:none; }
+@media(max-width:600px){.bank-list{grid-template-columns:1fr}.gift-action + .gift-action{margin-top:10px}}

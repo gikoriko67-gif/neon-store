@@ -36,7 +36,7 @@
     }
     dialog.showModal();
   }
-  document.querySelectorAll('[data-pay]').forEach(btn => btn.addEventListener('click', () => openPayment(btn.dataset.pay)));
+  document.querySelectorAll('[data-pay]').forEach(btn => btn.addEventListener('click', () => { if (btn.dataset.pay === 'stars') { window.location.href = 'neurogram-stars-payment.html'; return; } openPayment(btn.dataset.pay); }));
   const productUsdtButton = $('#product-usdt-pay');
   if (productUsdtButton) productUsdtButton.addEventListener('click', () => { window.location.href = 'neurogram-payment.html'; });
   $('[data-close]').addEventListener('click', () => dialog.close());
@@ -90,7 +90,7 @@
   const starsAmount = $('#stars-amount');
   const starsResult = $('#stars-rub-result');
   const starsRate = Number(cfg.starsSellRateRub || 0);
-  const starsMin = Number(cfg.starsSellMinimum || 300);
+  const starsMin = Number(cfg.starsSellMinimum || 315);
   document.querySelectorAll('[data-stars-rate]').forEach(el => {
     el.textContent = starsRate > 0 ? format(starsRate) : 'Не задан';
   });
@@ -122,6 +122,7 @@
   $('#stars-sell-submit').addEventListener('click', () => {
     const count = Math.floor(Number(starsAmount.value));
     if (!Number.isFinite(count) || count < starsMin) return toast(`Минимум для продажи — ${starsMin} Stars`);
+    if (count % 5 !== 0) return toast('Количество Stars должно делиться на 5: доступны подарки на 15, 25, 50 и 100 Stars');
     if (!starsRate || starsRate <= 0) return toast('Продажа Stars пока не настроена: укажите курс в config.js');
     if (!cfg.starsSellBotUrl) return toast('Сначала укажите ссылку на Telegram-бота в config.js');
     const payoutType = document.querySelector('input[name="stars-payout"]:checked')?.value || 'phone';

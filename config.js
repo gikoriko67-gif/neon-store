@@ -9,7 +9,8 @@ window.SITE_CONFIG = {
   supportTelegram: "https://t.me/", // Укажите ссылку на Telegram поддержки
   exchangeRateRub: 90,
   exchangeMinimumUsdt: 5,
-  starsSellMinimum: 300,
+  starsSellMinimum: 315,
   starsSellRateRub: 1, // 1 рубль за 1 Star
-  starsSellBotUrl: "https://t.me/TGbot" // Telegram-бот для приёма Stars (@TGbot)
+  starsSellBotUrl: "https://t.me/OplatNeuroGram_bot", // Telegram-бот магазина
+  starsGiftRecipient: "@SoftgameV4seller" // Username для отправки подарков
 };

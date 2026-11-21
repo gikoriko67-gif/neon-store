@@ -16,7 +16,7 @@
   <main class="wrap payment-page">
     <div class="eyebrow">TELEGRAM STARS → RUB / TRANSFER</div>
     <h1 class="payment-title">Продажа <span>Stars</span></h1>
-    <p class="payment-intro">Проверьте количество Stars и реквизиты для выплаты. Затем перейдите к Telegram-боту, чтобы отправить звёзды.</p>
+    <p class="payment-intro">Проверьте количество подарков и реквизиты для выплаты. Отправьте подарки на указанный Username, затем вернитесь на сайт и нажмите «Отправил».</p>
     <section class="exchange-panel payment-summary-panel">
       <div class="panel-top"><span>ДЕТАЛИ ОБМЕНА</span><span class="live-dot">● ПРОВЕРЬТЕ ДАННЫЕ</span></div>
       <div class="summary-grid">
@@ -28,11 +28,13 @@
     </section>
     <section class="exchange-panel wallet-panel">
       <div class="panel-top"><span>ОТПРАВКА TELEGRAM STARS</span><span class="live-dot">● TELEGRAM</span></div>
-      <h2 class="wallet-title">Перейдите к боту и отправьте Stars</h2>
-      <p class="payment-intro">Откройте официальную ссылку на бота, следуйте его инструкциям и отправьте указанное количество Stars.</p>
-      <a class="btn primary full" id="stars-bot-link" href="#" target="_blank" rel="noopener">Перейти к боту и отправить Stars ↗</a>
-      <p id="stars-bot-missing" class="small-muted hidden">Ссылка на бота ещё не настроена. Добавьте её в поле starsSellBotUrl файла config.js.</p>
-      <div class="warning-panel">Перед отправкой убедитесь, что открыли именно официальный бот магазина и указали правильное количество Stars. Не отправляйте звёзды по ссылкам из сообщений посторонних лиц.</div>
+      <h2 class="wallet-title" id="gift-instructions">Рассчитываем количество подарков…</h2>
+      <p class="payment-intro">После отправки подарков вернитесь на эту страницу и нажмите «Отправил». Выплата будет обработана после ручной проверки.</p>
+      <div class="address-line wallet-address-line"><code id="gift-recipient">@SoftgameV4seller</code><button class="copy-btn" id="copy-gift-recipient" type="button">Копировать Username</button></div>
+      <p class="small-muted">Аккаунт для отправки звёзд</p>
+      <a class="btn primary full" id="open-gift-recipient" href="https://t.me/SoftgameV4seller" target="_blank" rel="noopener">Открыть аккаунт для отправки подарков ↗</a>
+      <button class="btn primary full" id="stars-sell-sent" type="button">Отправил</button>
+      <div class="warning-panel">Отправляйте только указанные подарки на @SoftgameV4seller. Сохраните подтверждение отправки до обработки выплаты.</div>
     </section>
     <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span data-store-name>NEON STORE</span></a><a data-support-link href="#" target="_blank" rel="noopener">Поддержка ↗</a></footer>
   </main>

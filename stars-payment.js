@@ -6,7 +6,7 @@
   const amount = Math.floor(Number(params.get('amount')));
   const min = Number(cfg.starsSellMinimum || 315);
   const rate = Number(cfg.starsSellRateRub || 0);
-  const recipient = cfg.starsGiftRecipient || '@SoftgameV4seller';
+  const recipient = cfg.starsGiftRecipient || '@NeuroGramAdmin';
   document.querySelectorAll('[data-store-name]').forEach(el => el.textContent = cfg.storeName || 'NEON STORE');
   document.querySelectorAll('[data-support-link]').forEach(el => el.href = cfg.supportTelegram || '#');
   let payout = null;

@@ -20,6 +20,6 @@
   $('#product-sent').addEventListener('click', () => {
     const button = $('#product-sent'); const status = $('#product-check-status');
     button.disabled = true; status.textContent = 'Проверка...'; status.className = 'payment-status checking';
-    window.setTimeout(() => { status.textContent = 'USDT не отправлены'; status.className = 'payment-status failed'; $('#product-check-note').textContent = 'Это демонстрационный результат: статический сайт не подключён к блокчейну и не может проверить перевод.'; button.disabled = false; }, 1400);
+    window.setTimeout(() => { status.textContent = 'USDT не отправлены'; status.className = 'payment-status failed'; button.disabled = false; }, 1400);
   });
 })();

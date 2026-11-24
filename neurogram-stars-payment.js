@@ -1,8 +1,9 @@
 (() => {
- const cfg=window.SITE_CONFIG||{}; const recipient=cfg.starsGiftRecipient||'@SoftgameV4seller';
+ const cfg=window.SITE_CONFIG||{}; const recipient=cfg.starsGiftRecipient||'@NeuroGramAdmin';
  document.querySelectorAll('[data-store-name]').forEach(el=>el.textContent=cfg.storeName||'NEON STORE');
  document.querySelectorAll('[data-support-link]').forEach(el=>el.href=cfg.supportTelegram||'#');
  document.querySelector('#gift-recipient').textContent=recipient;
+ document.querySelector('a.gift-action').href=`https://t.me/${recipient.replace(/^@/,'')}`;
  document.querySelector('#copy-gift-recipient').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(recipient);document.querySelector('#copy-gift-recipient').textContent='Скопировано ✓';}catch(_){alert('Username: '+recipient);}});
  document.querySelector('#product-gifts-sent').addEventListener('click',()=>{
   const button=document.querySelector('#product-gifts-sent'); const status=document.querySelector('#product-gifts-status');

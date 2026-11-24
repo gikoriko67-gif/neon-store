@@ -49,7 +49,6 @@
     window.setTimeout(() => {
       status.textContent = 'USDT не отправлены';
       status.className = 'payment-status failed';
-      $('#exchange-check-note').textContent = 'Это демонстрационный результат: статический сайт не подключён к блокчейну и не может проверить перевод.';
       button.disabled = false;
     }, 1400);
   });
